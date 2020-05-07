@@ -1,0 +1,47 @@
+.post {
+    
+    position: relative;
+    
+    &_title {
+        margin-top: 2.2rem;
+        padding-top: 1rem;
+        font-size: 3rem;
+        font-weight: 700;
+        width: 75%;
+
+        span {
+            background: linear-gradient(
+                to top,
+                transparentize($main-color, 1) 13%,
+                $main-color 13%,
+                $main-color 35%,
+                transparentize($main-color, 1) 35%
+                
+            );
+        }
+    }
+
+    &_image {
+        border-radius: 50%;
+        max-width: 50%;
+        position: absolute;
+        top: 2rem;
+        right: 0rem;
+        z-index: -1;
+    }
+
+    &_meta {
+        font-size: 0.8rem;
+        font-style: italic;
+        color: lightten($text-color, 15%);
+        margin-top: 1.5rem;
+    }
+
+    &_content {
+        margin-top: 2rem;
+        margin-left: 3%;
+        max-width: 40%;
+        line-height: 2rem;
+
+    }
+}

@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+
+    .social-nav,
+    .sign,
+    .copyright {
+        width: calc(100%/3);
+    }
+}
+
