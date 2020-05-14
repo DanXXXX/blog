@@ -1,11 +1,9 @@
 <article <?php post_class('post'); ?>>
 
         <h1 class="post_title">
-            <a href="<?php the_permalink(); ?>">
-                <span>
-                    <?php the_title(); ?>
-                </span>
-            </a>
+            <span>
+                <?php the_title(); ?>
+            </span>
         </h1>
 
         <img src="https://source.unsplash.com/700x700/?city,black-and-white" class="post_image" alt="">
@@ -17,8 +15,6 @@
           </div>
 
           <div class="post_content">
-               <?php the_excerpt(); ?>
-               <a href="<?php the_permalink(); ?>">Lire la suite !</a>
+               <?php the_content(); ?>
           </div>
-
 </article>

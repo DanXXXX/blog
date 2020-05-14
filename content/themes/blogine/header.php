@@ -1,22 +1,23 @@
 
 <!DOCTYPE html>
-<html lang="fr">
+<html <?php language_attributes(); ?>  >
 <head>
-  <meta charset="UTF-8">
+  <meta charset=" <?php bloginfo('charset'); ?> ">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webpack</title>
-  <link rel="stylesheet" href="content/themes/blogine/public/css/style.css" />
+  <title><?php bloginfo('name'); ?> - <?php bloginfo('description') ?></title>
+  <link rel="stylesheet" href="<?php  echo get_theme_file_uri('public/css/style.css'); ?>" />
+ 
   <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
   <div class="wrapper">
     <header class="header">
 
       <div class="header_content">
 
         <div class="logo">
-          <a href="#" class="logo_text">Blog</a>
-          <div class="logo_baseline">Un simple blog</div>
+          <a href="<?php bloginfo('url'); ?>" class="logo_text"><?php bloginfo('name'); ?></a>
+          <div class="logo_baseline"><?php bloginfo('description'); ?></div>
         </div>
       </div>
 
@@ -45,3 +46,17 @@
     </header>
 
     <main class="main">
+
+    <?php
+    
+    // Vérifie l'URL de la home du site
+    if ( is_front_page() ) {
+      echo 'je suis sur la homepage statique !';
+    // Vérifie le type de la homepage (les derniers articles /page statique)
+    } if ( is_home() ) {
+      echo 'je suis sur la homepage Blog !';
+    } elseif (is_single()) {
+      echo 'je suis sur un article';
+    }
+
+    ?>
