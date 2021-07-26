@@ -3,7 +3,7 @@
 ## Liste des étapes 
 
 * Récupération du repo & vmise à en place du projet
-  * Cloner le repo du pattern   `git clone git@github.com:O-clock-Universe/WP-Pattern-Composer.git`
+  * Cloner le repo du pattern   `git clone git@github.com:DanXXXX.git`
     * Première solution  (nouveau projet commencé de 0)
       * Renommer le dossier avec le nom du projet souhaité  `mv WP-pattern-composer <nouveaunom>`
       * Se rendre dans le dossier nouvellement crée  `cd <nouveaunom>`
